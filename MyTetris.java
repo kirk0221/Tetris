@@ -1,5 +1,3 @@
-package test2;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -14,9 +12,8 @@ import java.awt.event.ActionEvent;
 
 public class MyTetris extends JFrame {
 
-	private JPanel contentPane;
-	
-	private TetrisCanvas tetrisCanvas = null;
+	private JPanel contentPane;	
+	TetrisCanvas tetrisCanvas = new TetrisCanvas();
 
 	/**
 	 * Launch the application.
@@ -40,7 +37,7 @@ public class MyTetris extends JFrame {
 	public MyTetris() {
 		setTitle("Tetris");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 385, 621);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -68,7 +65,6 @@ public class MyTetris extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		TetrisCanvas tetrisCanvas = new TetrisCanvas();
 		contentPane.add(tetrisCanvas, BorderLayout.CENTER);
 	}
 
